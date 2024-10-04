@@ -1,3 +1,5 @@
+const ALLOWED_ORIGIN = "https://emilnilssondataductus.github.io/"
+
 const channelRenderer = document.getElementById("channel-renderer");
 
 var channel = undefined;
@@ -28,7 +30,7 @@ if (channel) {
 
   channel.postMessage(
     `test-message from: ${channel.location}`,
-    channel.location.origin
+    ALLOWED_ORIGIN
   );
 } else {
   console.log("channel falsy");
